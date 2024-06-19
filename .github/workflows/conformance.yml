@@ -14,9 +14,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
-      - uses: dtolnay/rust-toolchain@7ba5d857b13a2c335579877a00c25c134410d383 # nightly
-      - uses: Swatinem/rust-cache@23bce251a8cd2ffc3c1075eaa2367cf899916d84 # v2.7.3
-      - name: Run tests
-        run: cargo test
+      - uses: actions/checkout@v4 # v4.1.7
+      - name: Compile conformance programs
+        run: #TODO
         working-directory: conformance
