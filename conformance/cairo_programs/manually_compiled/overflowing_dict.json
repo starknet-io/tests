@@ -1,0 +1,22 @@
+{
+    "attributes": [],
+    "builtins": [],
+    "compiler_version": "0.11.0",
+    "data": [
+        "0x1104800180018000",
+        "0x80000000000001"
+    ],
+    "hints": {},
+    "identifiers": {
+        "__main__.main": {
+            "decorators": [],
+            "pc": 0,
+            "type": "function"
+        }
+    },
+    "main_scope": "__main__",
+    "prime": "0x800000000000011000000000000000000000000000000000000000000000001",
+    "reference_manager": {
+        "references": []
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "attributes": [],
+    "builtins": [],
+    "compiler_version": "0.11.0",
+    "data": [],
+    "debug_info": {
+    	"instruction_locations": {}
+    },
+    "hints": {
+        "18446744073709551615": [
+            {
+                "accessible_scopes": [],
+                "code": "",
+                "flow_tracking_data": {
+                    "ap_tracking": {
+                        "group": 0,
+                        "offset": 0
+                    },
+                    "reference_ids": {}
+                }
+            }
+        ]
+    },
+    "identifiers": {
+        "__main__.main": {}
+    },
+    "main_scope": "",
+    "prime": "0x800000000000011000000000000000000000000000000000000000000000001",
+    "reference_manager": {
+        "references": []
+    }
+}
