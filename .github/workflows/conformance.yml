@@ -39,7 +39,7 @@ jobs:
           echo "$VIRTUAL_ENV=$VIRTUAL_ENV" >> $GITHUB_ENV
 
       - name: Create Proof Programs symlink
-        run: make create-proof-program-symlinks
+        run: make create-proof-programs-symlinks
 
       - name: Compile Cairo Zero programs
         run: make compile
