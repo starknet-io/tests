@@ -9,7 +9,7 @@ CAIRO_0_PROGRAMS:=$(shell find $(CAIRO_0_DIR) -name '*.cairo')
 COMPILED_CAIRO_0_PROGRAMS:=$(CAIRO_0_PROGRAMS:%.cairo=%.json)
 
 $(CAIRO_0_DIR)%.json: $(CAIRO_0_DIR)%.cairo
-	cairo-compile --cairo-path "$(CAIRO_0_DIR)" $< --output $@
+	cairo-compile --cairo_path "$(CAIRO_0_DIR)" $< --output $@
 
 # Compile Cairo Zero Proof Programs
 
