@@ -14,9 +14,32 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
-      - uses: dtolnay/rust-toolchain@7ba5d857b13a2c335579877a00c25c134410d383 # nightly
-      - uses: Swatinem/rust-cache@23bce251a8cd2ffc3c1075eaa2367cf899916d84 # v2.7.3
-      - name: Run tests
-        run: cargo test
-        working-directory: conformance
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.10
+        id: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Load cached venv
+        id: cached-dependencies
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key:
+            venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version
+            }}-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          python -m pip install -r requirements.txt
+          echo "$VIRTUAL_ENV/bin" >> $GITHUB_PATH
+          echo "$VIRTUAL_ENV=$VIRTUAL_ENV" >> $GITHUB_ENV
+
+      - name: Create Proof Programs symlink
+        run: make create-proof-programs-symlinks
+
+      - name: Compile Cairo Zero programs
+        run: make compile
