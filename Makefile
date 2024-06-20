@@ -1,10 +1,10 @@
 .PHONY: create-proof-programs-symlinks
 create-proof-programs-symlinks:
-	cd conformance/proof-programs; ln -s ../cairo-0/*.cairo .
+	cd conformance/proof_programs; ln -s ../cairo_0/*.cairo .
 
 # Compile Cairo Zero Programs
 
-CAIRO_0_DIR=conformance/cairo-0/
+CAIRO_0_DIR=conformance/cairo_0/
 CAIRO_0_PROGRAMS:=$(shell find $(CAIRO_0_DIR) -name '*.cairo')
 COMPILED_CAIRO_0_PROGRAMS:=$(CAIRO_0_PROGRAMS:%.cairo=%.json)
 
@@ -13,7 +13,7 @@ $(CAIRO_0_DIR)%.json: $(CAIRO_0_DIR)%.cairo
 
 # Compile Cairo Zero Proof Programs
 
-CAIRO_0_PROOF_DIR=conformance/proof-programs/
+CAIRO_0_PROOF_DIR=conformance/proof_programs/
 CAIRO_0_PROOF_PROGRAMS:=$(shell find $(CAIRO_0_PROOF_DIR) -name '*.cairo')
 COMPILED_CAIRO_0_PROOF_PROGRAMS:=$(CAIRO_0_PROOF_PROGRAMS:%.cairo=%.json)
 

@@ -1,4 +1,3 @@
-
 from starkware.cairo.common.cairo_secp.bigint import (
     BigInt3,
     UnreducedBigInt3,
@@ -45,7 +44,7 @@ func unreduced_sqr(a: BigInt3) -> (res_low: UnreducedBigInt3) {
     );
 }
 
-    
+
 // Computes the slope of the elliptic curve at a given point.
 // The slope is used to compute point + point.
 //
