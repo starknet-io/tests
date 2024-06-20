@@ -5,7 +5,7 @@ from starkware.cairo.common.registers import get_label_location
 from starkware.cairo.common.invoke import invoke
 from starkware.cairo.common.alloc import alloc
 
-from cairo_programs.sha256 import sha256, finalize_sha256
+from conformance.cairo_0.sha256 import sha256, finalize_sha256
 
 // Taken from https://github.com/cartridge-gg/cairo-sha256/blob/8d2ae515ab5cc9fc530c2dcf3ed1172bd181136e/tests/test_sha256.cairo
 func test_sha256_hello_world{bitwise_ptr: BitwiseBuiltin*, range_check_ptr}() {

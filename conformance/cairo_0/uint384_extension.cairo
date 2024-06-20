@@ -6,7 +6,7 @@ from starkware.cairo.common.math_cmp import is_le
 from starkware.cairo.common.pow import pow
 from starkware.cairo.common.registers import get_ap, get_fp_and_pc
 // Import uint384 files
-from cairo_programs.uint384 import u384, Uint384, Uint384_expand, ALL_ONES
+from conformance.cairo_0.uint384 import u384, Uint384, Uint384_expand, ALL_ONES
 // Functions for operating 384-bit integers with 768-bit integers
 
 // Represents an integer in the range [0, 2^768).
@@ -118,13 +118,13 @@ namespace u384_ext {
                 a = []
                 for _ in range(length):
                     a.append( num & ((1 << num_bits_shift) - 1) )
-                    num = num >> num_bits_shift 
+                    num = num >> num_bits_shift
                 return tuple(a)
 
             def pack(z, num_bits_shift: int) -> int:
                 limbs = (z.b01, z.b23, z.b45)
                 return sum(limb << (num_bits_shift * i) for i, limb in enumerate(limbs))
-                
+
             def pack_extended(z, num_bits_shift: int) -> int:
                 limbs = (z.d0, z.d1, z.d2, z.d3, z.d4, z.d5)
                 return sum(limb << (num_bits_shift * i) for i, limb in enumerate(limbs))
@@ -229,13 +229,13 @@ namespace u384_ext {
                 a = []
                 for _ in range(length):
                     a.append( num & ((1 << num_bits_shift) - 1) )
-                    num = num >> num_bits_shift 
+                    num = num >> num_bits_shift
                 return tuple(a)
 
             def pack(z, num_bits_shift: int) -> int:
                 limbs = (z.d0, z.d1, z.d2)
                 return sum(limb << (num_bits_shift * i) for i, limb in enumerate(limbs))
-                
+
             def pack_extended(z, num_bits_shift: int) -> int:
                 limbs = (z.d0, z.d1, z.d2, z.d3, z.d4, z.d5)
                 return sum(limb << (num_bits_shift * i) for i, limb in enumerate(limbs))

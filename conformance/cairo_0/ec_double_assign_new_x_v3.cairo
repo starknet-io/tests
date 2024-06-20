@@ -1,6 +1,6 @@
 from starkware.cairo.common.cairo_secp.bigint import BigInt3, nondet_bigint3, UnreducedBigInt3
-from cairo_programs.compute_slope_v2 import verify_zero, unreduced_mul
-from cairo_programs.compute_doubling_slope_v2 import compute_doubling_slope, EcPoint, unreduced_sqr
+from conformance.cairo_0.compute_slope_v2 import verify_zero, unreduced_mul
+from conformance.cairo_0.compute_doubling_slope_v2 import compute_doubling_slope, EcPoint, unreduced_sqr
 
 // Computes the addition of a given point to itself.
 //

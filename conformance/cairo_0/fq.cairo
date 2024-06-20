@@ -10,7 +10,7 @@ from starkware.cairo.common.cairo_secp.bigint import (
     nondet_bigint3,
 )
 
-from cairo_programs.uint384_extension import Uint384, Uint768, u384
+from conformance.cairo_0.uint384_extension import Uint384, Uint768, u384
 
 // src: https://github.com/rdubois-crypto/garaga/blob/48a5b1d7d530baba2338698ffebf988ed3d19e6d/src/curve.cairo
 const P0 = 60193888514187762220203335;

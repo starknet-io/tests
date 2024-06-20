@@ -1,6 +1,6 @@
 %builtins range_check
 
-from cairo_programs.fq import fq, Uint256, Uint512
+from conformance.cairo_0.fq import fq, Uint256, Uint512
 
 func test_add{range_check_ptr}() {
     let a = Uint256(346, 0);

@@ -1,10 +1,9 @@
-
 from starkware.cairo.common.cairo_secp.bigint import BigInt3, nondet_bigint3, UnreducedBigInt3
 from starkware.cairo.common.cairo_secp.field import (
     is_zero,
     unreduced_sqr,
 )
-from cairo_programs.compute_slope_v2 import compute_slope, EcPoint, verify_zero, unreduced_mul
+from conformance.cairo_0.compute_slope_v2 import compute_slope, EcPoint, verify_zero, unreduced_mul
 // Computes the addition of two given points.
 //
 // Arguments:

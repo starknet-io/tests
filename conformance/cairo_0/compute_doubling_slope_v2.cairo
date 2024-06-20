@@ -4,7 +4,7 @@ from starkware.cairo.common.cairo_secp.bigint import (
     nondet_bigint3,
 )
 
-from cairo_programs.compute_slope_v2 import verify_zero
+from conformance.cairo_0.compute_slope_v2 import verify_zero
 
 const BASE = 2 ** 86;
 const SECP_REM = 19;

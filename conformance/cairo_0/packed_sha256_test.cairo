@@ -1,6 +1,6 @@
 %builtins range_check bitwise
 from starkware.cairo.common.alloc import alloc
-from cairo_programs.packed_sha256 import (
+from conformance.cairo_0.packed_sha256 import (
     BLOCK_SIZE,
     compute_message_schedule,
     sha2_compress,
